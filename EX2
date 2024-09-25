@@ -1,52 +1,28 @@
-# Prerequisites
-*.d
+#include <stdio.h>
+#include <string.h>
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+int main(void) {
+  char string[100];
+  int count = 0;
+  int i = 0;
 
-# Linker output
-*.ilk
-*.map
-*.exp
+    printf("Digite uma palavra \n\n\n");
+  fgets(string,sizeof(string),stdin);
 
-# Precompiled Headers
-*.gch
-*.pch
+  while(string[i] != '\0'){
+    if(string[i] == 'a' || string[i] == 'A'){
+      count++;      
+    }
+    i++;
+  }
+if(count > 0){
+  printf("A palavra tem %d letras a", count);
+}
+  else{
+    printf("A palavra não tem letras a");
+  }
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+  return 0;
+}
